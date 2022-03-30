@@ -1,0 +1,10 @@
+#ignore folder
+node_modules/
+
+#ignore files
+*.wmv
+*.mp3
+*.java
+*.hwp
+*.psd
+*.ai
