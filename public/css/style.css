@@ -27,9 +27,10 @@ a, a:link {
     body {
         background: linear-gradient(to bottom, #fff, #EEF5FF);
     }
+    
     .header-top{
         background: var(--bar-bg-color);
-        height: 50px;
+        height: 60px;
         position: fixed;
         width: 100%;
         top: 0;
@@ -37,7 +38,7 @@ a, a:link {
 
     }
     .top-wrap{
-        height: 50px;
+        height: 60px;
         font-size: 20px;
         display: flex;
         justify-content: space-between;
@@ -52,14 +53,14 @@ a, a:link {
         width: 250px;
         height: 160px;
         /* margin: 100px auto; */
-        margin: 100px auto 30px;
+        margin: 110px auto 50px;
     }
     .btns {
         display: flex;
         flex-direction: column; /* 상하배치 */
         width: 60vw;
         margin: 0 auto;
-        padding: 30px 0;
+        padding: 100px 0;
     }
     button {
         height: 75px;
@@ -90,12 +91,63 @@ a, a:link {
         justify-content: space-between;
         font-size: 20px;
     }
+    /*-----------side pannel------------------- */
+    #sidePannel {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+
+    }
+    #closeSide {
+        background: rgba(0, 0, 0, 1);
+        color: var(--base-text-white);
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        position: absolute;
+        right: 0;
+        top: -60px;
+    }
+    .pannel-overlay {
+        background: #262626;
+        width: 50%;
+        height: 100%;
+        margin: 0 0 0 50%;
+        overflow: hidden;
+    }
+    .pannel-overlay nav {
+        color: var(--base-text-white);
+        padding: 0 20%;
+    }
+    #snb li {
+        margin: 2rem 0;
+        position: relative;
+    }
+    #snb li::after {
+        content: "+";
+        display: inline;
+        position: absolute;
+        right: 0;
+        color: white;
+        font-size: 14px;
+    }
+    .icon-links {
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+    }
     /*-----------모바일 section------------------- */
     .section-title {
         text-align: center;
         font-size: 1.25rem;
         margin: 0 0 1.5rem;
     }
+
     
     
     

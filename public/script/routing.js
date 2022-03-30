@@ -1,27 +1,21 @@
-//1게임 생성
+// 자바스크립트 변수 : var vs let, const(=상수)
+// 차이점           : old  /  new
+// var 보다 let, const 사용하기
+// 문제점! var는 선언하지 않고도 사용가능하고 또 전역/지역 명확하지 않음
 
-//클릭할 대상
-var make5num = document.querySelector("#make_num5")
+// 대상
+const openBTN = document.querySelector("#openSide")
+const closeBTN = document.querySelector("#closeSide")
+const sidePan = document.querySelector("#sidePannel")
 
-make5num.addEventListener("click", show5num);
+// 이벤트 등록
+openBTN.addEventListener("click", sideOpen);
+closeBTN.addEventListener("click", sideClose);
 
-function show5num(){
-    var num_one = [];
-    for(var i=1; i<46; i++){
-        num_one.push(i);
-    }
-    num_one.sort(function(){
-        return Math.random() - 0.5
-    }) 
-    //console.log(num_one);
-    //추출 .slice() vs .splice()
-
-    var start = Math.ceil(Math.random() * 40);
-    var new_num_one = num_one.slice(start, start+6);
-    console.log(new_num_one.sort(function(a,b){ //오름차순 정리
-        return a-b;
-    }));
-    var bonus_num = new_num_one[new_num_one.length-1]
-    console.log("보너스 번호 : "+bonus_num);
-    //localStorage.setItem("game_one", new_num_one)
+// 함수
+function sideOpen(){
+    sidePan.classList.remove("d-none");
+}
+function sideClose(){
+    sidePan.classList.add("d-none");
 }

@@ -14,8 +14,12 @@
 </head>
 <body id="main">
     <h1 class="d-none">로또 한울</h1>
-    <div id="sidePannel">
-        <a href="#"><i class="fa-solid fa-bars"></i></a>
+    <div id="sidePannel" class="d-none">
+        <div id="closeSide">
+            <a href="#">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
         <div class="pannel-overlay">
             <nav>
                 <ul id="snb">
@@ -26,10 +30,10 @@
                 </ul>
                 <hr>
                 <ul class="icon-links">
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#">고객센터</a></li>
+                    <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                    <li><a href="/join"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="/cs"><i class="fa-solid fa-headset"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -38,16 +42,11 @@
         <div class="header-top">
             <ul class="top-wrap">
                 <li>
-                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                    <a href="/"><i class="fa-solid fa-house"></i></a>
                 </li>
                 <li>
                     <!-- 메뉴바 : burger icon -->
-                    <a href="#"><i class="fa-solid fa-bars"></i></a>
-                    <!-- <div id="burger">
-                        <div class="burger-button" id="closeBurger">
-                            <i class="fa-solid fa-close"></i>
-                        </div>
-                    </div> -->
+                    <div id="openSide"><a href="#"><i class="fa-solid fa-bars"></i></a></div>
                 </li>
             </ul>
         </div>
