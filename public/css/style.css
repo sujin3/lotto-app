@@ -4,7 +4,7 @@
     --base-text-dark: #333;
     --base-text-white: #fff;
     --base-bg-white: white;
-    --base-bg-dark: #efefef;
+    --base-bg-gray: #E5E5E5;
     --main-color1: #92C120;
     --main-color2: #F18F01;
     --main-color3: #027BA4;
@@ -19,13 +19,18 @@ a, a:link {
     color: inherit;
     text-decoration: none;
 }
+.text-center {
+    text-align: center;
+}
+.my-1 {
+    margin: 1rem;
+}
 .d-none {
     display: none;
 }
 section {
     margin: 0 3rem;
 }
-
 @media screen and (max-width: 480px){
     html {
         height: 100vh; /* 또는 100%, vh:viewport height */
@@ -75,7 +80,6 @@ section {
         border: 0;
         border-radius: 50px;
         margin: 0 0 2rem 0;
-        padding-left: 40px;
     }
     #make_num5 {
         background: #3A70FA url("../images/x5.png") no-repeat 5% center;
@@ -232,6 +236,67 @@ section {
         right: 0;
     }
     
+    /*-----------mobile section : result page------------------- */
+    #lotto_num .dl-wrap {
+        display: table;
+        width: 95%;
+        margin: 0 auto;
+    }
+    #lotto_num dl {
+        display: table-row;
+        
+    }
+    #lotto_num dt, #lotto_num dd {
+        display: table-cell;
+    }
+    #lotto_num dt {
+        background: var(--base-text-dark);
+        color: var(--base-text-white);
+        padding: 1rem 2rem;
+    }
+    #lotto_num dd {
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+        letter-spacing: 5px;
+        padding: 0 2rem;
+    }
+    #blind {
+        width: 180px;
+        height: 40px;
+        display: block;
+        position: relative;
+        background: #E5E5E5;
+        font-size: var(--base-font-size);
+        color: var(--base-text-dark);
+        border-radius: 50px;
+        margin: 2rem auto;
+        transition: all ease-in-out .3s;
+    }
+    #blind.lock {
+        background: var(--base-bg-gray);
+    }
+    #blind::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--base-bg-white);
+        position: absolute;
+        top: 10px;
+        transition: all ease-in-out .3s;
+    }
+    #blind.unlock {
+        background: var(--main-color3);
+        color: var(--base-text-white);
+    }
+    #blind.lock::before {
+        left: 10px;
+    }
+    #blind.unlock::before{
+        right: 10px;
+        background: var(--base-bg-white);
+    }
     /*-----------mobile section : customer page------------------- */
     .icon-list {
         display: grid;
