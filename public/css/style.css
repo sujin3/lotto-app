@@ -5,6 +5,9 @@
     --base-text-white: #fff;
     --base-bg-white: white;
     --base-bg-dark: #efefef;
+    --main-color1: #92C120;
+    --main-color2: #F18F01;
+    --main-color3: #027BA4;
     --base-font-size: 16px;
     --bar-bg-color: #019ED3;
 }
@@ -18,6 +21,9 @@ a, a:link {
 }
 .d-none {
     display: none;
+}
+section {
+    margin: 0 3rem;
 }
 
 @media screen and (max-width: 480px){
@@ -89,7 +95,8 @@ a, a:link {
         padding: 0 8%;
         box-sizing: border-box;
         justify-content: space-between;
-        font-size: 20px;
+        font-size: 18px;
+        color: #7B7B79;
     }
     /*-----------side pannel------------------- */
     #sidePannel {
@@ -103,7 +110,7 @@ a, a:link {
 
     }
     #closeSide {
-        background: rgba(0, 0, 0, 1);
+        background: #027BA4;
         color: var(--base-text-white);
         width: 60px;
         height: 60px;
@@ -124,41 +131,114 @@ a, a:link {
         color: var(--base-text-white);
         padding: 0 20%;
     }
-    #snb li {
+    #snb > li {
         margin: 2rem 0;
         position: relative;
     }
-    #snb li::after {
+    #snb > li::after {
         content: "+";
         display: inline;
         position: absolute;
+        top: 0;
         right: 0;
         color: white;
         font-size: 14px;
+    }
+    #snb > li > a { /* 메뉴항목이 포함된 범위 전체 클릭가능 */
+        display: block;
     }
     .icon-links {
         display: flex;
         justify-content: center;
         column-gap: 1rem;
+        font-size: 20px;
     }
-    /*-----------모바일 section------------------- */
+    /*-----------mobile section------------------- */
     .section-title {
         text-align: center;
         font-size: 1.25rem;
         margin: 0 0 1.5rem;
     }
-
+    /*-----------mobile section : login page------------------- */
+    #loginForm li, #registerForm li {
+        position: relative;
+        margin: 0 0 1.5rem 0;
+    }
+    #loginForm li input, #registerForm li input {
+        text-indent: 20%;
+        border: 0;
+    }
+    #loginForm li label, #registerForm li label {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        color: #7B7B79;
+    }
+    #userId, #userPw, [type=submit] {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgb(0, 0, 0, .2);
+    }
+    #loginForm li input[type=submit], #registerForm li input[type=submit] {
+        background: #027BA4;
+        color: var(--base-text-white);
+        text-indent: 0;
+        margin-bottom: 1rem;
+        font-size: var(--base-font-size);
+    }
+    #loginForm li p {
+        text-align: center;
+    }
+    .sns-icons {
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+        margin: 1rem 0 0 0;
+        font-size: 2.5rem;
+    }
+    /*-----------mobile section : register page------------------- */
+    #registerForm li #userSecurity {
+        width: 60%;
+        height: 50px;
+        border-radius: 10px;
+        text-indent: 40%;
+        
+        box-shadow: 0 0 10px 0 rgb(0, 0, 0, .2);
+    }
+    #registerForm li #clickSecurity {
+        display: inline-block;
+        line-height: 52px;
+        border-radius: 10px;
+        height: 52px;
+        width: 36%;
+        margin: 0 0 0 1%;
+        text-align: center;
+        vertical-align: middle;
+        color: var(--base-text-white);
+        border: 1px solid var(--main-color1);
+        background: var(--main-color1);
+    }
+    label[for=userPrivacy] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    .warn {
+        color: red;
+        position: absolute;
+        right: 0;
+    }
     
-    
-    
-    /*-----------모바일 section------------------- */
+    /*-----------mobile section : customer page------------------- */
     .icon-list {
         display: grid;
         margin: 0 1rem;
         grid-template-columns: 1fr 1fr 1fr;
         /* fraction : 비율(공간) */
         gap: 1rem;
-
     }
     .icon-list li {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
@@ -166,7 +246,7 @@ a, a:link {
         border-radius: 10px;
     }
     .icon-list li:hover {
-        background: #92C120;
+        background: var(--main-color1);
         color: var(--base-text-white);
         transform: scale(1.2);
         transition: all ease-in-out .3s;

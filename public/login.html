@@ -61,7 +61,7 @@
         <h2 class="section-title">로그인</h2>
         <article>
             <h3 class="d-none">회원로그인 폼</h3>
-            <form action="/add_user" id="registerForm" method="post" autocomplete="off">
+            <form id="loginForm" method="post" autocomplete="off">
                 <ul>
                     <li>
                         <label for="userId">ID</label>
@@ -74,11 +74,13 @@
                     <li>
                         <input type="submit" value="로그인" >
                     </li>
+                    <hr>
                     <li>
-                        <ul>
-                            <li><a href="#">google</a></li>
-                            <li><a href="#">insta</a></li>
-                            <li><a href="#">facebook</a></li>
+                        <p>간편 로그인</p>
+                        <ul class="sns-icons">
+                            <li><a href="#"><i class="fab fab fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                         </ul>
                     </li>
                 </ul>
