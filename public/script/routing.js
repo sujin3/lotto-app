@@ -19,3 +19,28 @@ function sideOpen(){
 function sideClose(){
     sidePan.classList.add("d-none");
 }
+
+
+/* 로또 번호 생성 잠금,해제 버튼 */
+const unlockBTN = document.querySelector("#blind")
+
+unlockBTN.addEventListener("click", handleClick)
+
+let btnStatus = "lock"
+
+function handleClick(e){
+    if(e.target.className == "lock"){
+        unlock("해제");
+    } else {
+        lock("잠금");
+    }
+}
+
+function unlock(message){
+    unlockBTN.className = "unlock"
+    unlockBTN.textContent = message
+}
+function lock(message){
+    unlockBTN.className = "lock"
+    unlockBTN.textContent = message
+}

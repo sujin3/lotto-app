@@ -73,13 +73,14 @@ section {
         margin: 0 auto;
         padding: 100px 0;
     }
-    button {
+    .btns button {
         height: 75px;
         font-size: 25px;
         color: white;
         border: 0;
         border-radius: 50px;
         margin: 0 0 2rem 0;
+        padding-left: 40px;
     }
     #make_num5 {
         background: #3A70FA url("../images/x5.png") no-repeat 5% center;
@@ -165,8 +166,9 @@ section {
     }
     /*-----------mobile section : login page------------------- */
     #loginForm li, #registerForm li {
+        display: flex;
         position: relative;
-        margin: 0 0 1.5rem 0;
+        margin: 0 0 1rem 0;
     }
     #loginForm li input, #registerForm li input {
         text-indent: 20%;
@@ -192,7 +194,8 @@ section {
         margin-bottom: 1rem;
         font-size: var(--base-font-size);
     }
-    #loginForm li p {
+    #loginForm li:last-child {
+        display: block;
         text-align: center;
     }
     .sns-icons {
@@ -208,8 +211,8 @@ section {
         height: 50px;
         border-radius: 10px;
         text-indent: 40%;
-        
         box-shadow: 0 0 10px 0 rgb(0, 0, 0, .2);
+        margin-right: 10px;
     }
     #registerForm li #clickSecurity {
         display: inline-block;
@@ -221,6 +224,7 @@ section {
         text-align: center;
         vertical-align: middle;
         color: var(--base-text-white);
+        box-shadow: 0 0 10px 0 rgb(0, 0, 0, .2);
         border: 1px solid var(--main-color1);
         background: var(--main-color1);
     }
@@ -257,7 +261,7 @@ section {
         border-top: 1px solid #E5E5E5;
         border-bottom: 1px solid #E5E5E5;
         letter-spacing: 5px;
-        padding: 0 2rem;
+        padding: 10px;
     }
     ul#lotto_num li {
         display: flex;
@@ -282,6 +286,14 @@ section {
         padding: 0 1rem;
         text-indent: 10%;
         flex: 8;
+    }
+    button {
+        height: 75px;
+        font-size: 25px;
+        color: white;
+        border: 0;
+        border-radius: 50px;
+        margin: 0 0 2rem 0;
     }
     #blind {
         width: 180px;
@@ -346,5 +358,16 @@ section {
         gap: 1rem;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #lotto_num dd{
+        letter-spacing: -1px;
+    }
+}
+@media screen and (max-width: 320px){
+    #lotto_num dd{
+        letter-spacing: -1px;
     }
 }
