@@ -244,7 +244,6 @@ section {
     }
     #lotto_num dl {
         display: table-row;
-        
     }
     #lotto_num dt, #lotto_num dd {
         display: table-cell;
@@ -259,6 +258,30 @@ section {
         border-bottom: 1px solid #E5E5E5;
         letter-spacing: 5px;
         padding: 0 2rem;
+    }
+    ul#lotto_num li {
+        display: flex;
+    }
+    ul#lotto_num li span {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+    }
+    ul#lotto_num li > span:first-child {
+        text-align: center;
+        background: var(--base-text-dark);
+        color: var(--base-text-white);
+        padding: 0 1.25rem;
+        flex: 1;
+    }
+    ul#lotto_num li > span:last-child {
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+        letter-spacing: 5px;
+        padding: 0 1rem;
+        text-indent: 10%;
+        flex: 8;
     }
     #blind {
         width: 180px;
